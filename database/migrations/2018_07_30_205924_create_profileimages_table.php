@@ -19,6 +19,8 @@ class CreateProfileimagesTable extends Migration
             $table->foreign('profile_id')
                 ->references('id')
                 ->on('profiles');
+            $table->string('picture')->nullable();
+            $table->string('banner')->nullable();
             $table->timestamps();
         });
     }
